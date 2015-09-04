@@ -1,19 +1,25 @@
-var EC = require('elliptic').ec
-var ec = new EC('ed25519')
- 
-// Generate keys 
-var key = ec.genKeyPair()
-// console.log("key", key.getPublic('hex'), key.getPublic('hex'))
-// var key2 = ec.keyFromPublic(key.getPublic('hex'), 'hex')
-// console.log("key2", key2.getPublic('hex'), key2.getPublic('hex'))
+var child_process = require('child_process')
+
+if (process.argv.length !== 3) {
+    console.error("Pass name")
+    process.exit(1)
+} 
+// Generate keys
+var privKey = child_process.execSync("openssl genrsa 2048", {
+    encoding: 'utf8'
+})
+var pubKey = child_process.execSync("openssl rsa -pubout", {
+    input: privKey,
+    encoding: 'utf8'
+})
 
 var db = require('../lib/db')
-db.addKey(key.getPublic('hex'), function(err) {
+db.addKey(process.argv[2], pubKey, function(err) {
     if (err) {
         console.error(err.stack || err.message)
         process.exit(1)
     } else {
-        console.log("Ok: " + key.getPrivate('hex'))
+        console.log("Ok: " + privKey)
         process.exit(0)
     }
 })
