@@ -12,9 +12,10 @@
     "level": "^1.3.0",
     "morgan": "^1.6.1",
     "through2": "^2.0.0",
+    "uglifyjs": "^2.4.10",
     "zmq": "^2.13.0"
   },
   "scripts": {
-    "install": "browserify lib/ui.js > public/bundle.js"
+    "install": "browserify lib/ui.js > public/bundle.js && uglifyjs -pc -- public/bundle.js > public/bundle.min.js"
   }
 }
