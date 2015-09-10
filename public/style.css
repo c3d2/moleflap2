@@ -1,0 +1,28 @@
+body {
+    margin: 1em auto 0;
+    max-width: 60em;
+    color: #111;
+    background-color: white;
+    text-align: center;
+}
+body::before {
+    content: url('mole_people.jpg');
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+textarea {
+    border: 1px solid #333;
+    font-family: Monospace;
+    font-size: 100%;
+}
+
+button {
+    float: left;
+    margin: 1em 0 0;
+}
+button, p {
+    font-size: 120%;
+    line-height: 2em;
+}
