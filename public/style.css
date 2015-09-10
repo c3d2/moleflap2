@@ -3,7 +3,6 @@ body {
     max-width: 60em;
     color: #111;
     background-color: white;
-    text-align: center;
 }
 body::before {
     content: url('mole_people.jpg');
@@ -22,7 +21,12 @@ button {
     float: left;
     margin: 1em 0 0;
 }
-button, p {
+button, p, progress {
+    display: inline-block;
+    margin: 0.5em 0.5em 0.5em 0;
     font-size: 120%;
     line-height: 2em;
+}
+progress {
+    height: 2em;
 }
