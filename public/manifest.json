@@ -1,0 +1,33 @@
+{
+  "name": "Moleflap",
+  "short_name": "Moleflap",
+  "icons": [{
+        "src": "icon-16.jpg",
+        "sizes": "16x16",
+        "type": "image/jpeg"
+      }, {
+        "src": "icon-32.jpg",
+        "sizes": "32x32",
+        "type": "image/jpeg"
+      }, {
+        "src": "icon-64.jpg",
+        "sizes": "64x64",
+        "type": "image/jpeg"
+      }, {
+        "src": "icon-96.jpg",
+        "sizes": "96x96",
+        "type": "image/jpeg"
+      }, {
+        "src": "icon-128.jpg",
+        "sizes": "128x128",
+        "type": "image/jpeg"
+      }, {
+        "src": "icon-144.jpg",
+        "sizes": "144x144",
+        "type": "image/jpeg"
+      }],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#B84E3E",
+  "theme_color": "#A23B2F"
+}
