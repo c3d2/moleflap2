@@ -1,25 +1,29 @@
 body {
-    margin: 1em auto 0;
+    margin: 0 auto;
+    padding: 0;
     max-width: 60em;
     color: #111;
     background-color: white;
 }
 body::before {
     content: url('mole_people.jpg');
+    max-width: 100%;
     float: left;
-    margin-right: 1em;
-    margin-bottom: 1em;
+    margin: 0;
+    padding: 0;
 }
 
 textarea {
     border: 1px solid #333;
     font-family: Monospace;
     font-size: 100%;
+    margin: 1em 2em;
+    padding: 0;
 }
 
 button {
     float: left;
-    margin: 1em 0 0;
+    margin: 1em 2em;
 }
 button, p, progress {
     display: inline-block;
